@@ -14,6 +14,7 @@ BH1750 lightMeter;
 File file;
 
 #define MAX_W 100
+#define TIME_DELAY 500
 int i = 0;
 
 void setup() 
@@ -47,7 +48,6 @@ void loop()
 	if (i == MAX_W)
 	{
 		file.close();
-		
 	}
 	
 	else
@@ -56,7 +56,7 @@ void loop()
 		writeFile(file);
 		
 		i++;
-		delay(500);
+		delay(TIME_DELAY);
 	}
 }
 
